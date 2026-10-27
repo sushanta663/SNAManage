@@ -1,0 +1,59 @@
+/* SNAManage - plain styling, two colours: green and red */
+:root {
+  --green: #1b7a3e;
+  --green-dark: #145c2f;
+  --red: #c62828;
+  --red-dark: #9c1f1f;
+  --bg: #fafafa;
+  --border: #e0e0e0;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: #222; }
+.container { max-width: 1000px; margin: 0 auto; padding: 16px; }
+
+.navbar { background: var(--green); color: white; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; }
+.navbar .brand { font-size: 20px; font-weight: bold; color: white; text-decoration: none; }
+.navbar .brand span { color: #ffdede; }
+.nav-links { display: flex; gap: 14px; align-items: center; font-size: 14px; }
+.nav-links a { color: white; text-decoration: none; }
+.logout-btn { background: var(--red); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
+
+h1, h2, h3 { color: var(--green-dark); }
+.card { background: white; border: 1px solid var(--border); border-radius: 6px; padding: 16px; margin-bottom: 14px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.form-box { max-width: 420px; margin: 40px auto; }
+
+input, select, textarea { width: 100%; padding: 8px; margin: 6px 0 12px 0; border: 1px solid var(--border); border-radius: 4px; font-size: 14px; }
+label { font-size: 13px; font-weight: bold; color: #444; }
+
+.btn { padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; color: white; margin-right: 6px; }
+.btn-green { background: var(--green); }
+.btn-green:hover { background: var(--green-dark); }
+.btn-red { background: var(--red); }
+.btn-red:hover { background: var(--red-dark); }
+.btn:disabled { background: #aaa; cursor: not-allowed; }
+
+.error-text { color: var(--red); font-size: 13px; margin-bottom: 10px; }
+.success-text { color: var(--green); font-size: 13px; margin-bottom: 10px; }
+.muted { color: #777; font-size: 13px; }
+
+.badge { display: inline-block; padding: 2px 9px; border-radius: 10px; font-size: 12px; color: white; background: #888; }
+.badge-green { background: var(--green); }
+.badge-red { background: var(--red); }
+
+.stat { text-align: center; }
+.stat .num { font-size: 30px; font-weight: bold; color: var(--green); }
+.stat .num.red { color: var(--red); }
+
+/* workflow tracker */
+.steps { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+.step { padding: 4px 10px; border-radius: 12px; font-size: 12px; border: 1px solid #bbb; color: #777; background: white; }
+.step-done { background: var(--green); border-color: var(--green); color: white; }
+.step-current { border-color: var(--green); color: var(--green); font-weight: bold; }
+.step-rejected { background: var(--red); border-color: var(--red); color: white; }
+.arrow { color: #aaa; font-size: 12px; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--border); font-size: 14px; }
+th { color: var(--green-dark); }
+footer { text-align: center; font-size: 12px; color: #777; margin: 30px 0 10px; }
